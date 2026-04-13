@@ -56,7 +56,7 @@ https://www.kaggle.com/code/anik424/eda-comcast-consumer-complaints-analysis-usi
 - Standardized text fields  
 - Extracted time-based features (month, day)  
 - Normalized categorical fields (state, status)  
-
+---
 ### 2. Complaint Classification
 
 To translate unstructured complaint text into actionable insights, a **multi-label keyword classification system** was developed based on telecom customer experience (CX) functions.
@@ -77,18 +77,15 @@ Each complaint is evaluated against a structured taxonomy:
 
 #### Classification Design Principles
 
-- **Multi-label classification**  
-  Captures overlapping issues to better reflect real customer experiences  
+- **Multi-label classification** — captures overlapping issues to reflect real customer experiences  
+- **Priority-based primary category** — assigns a dominant category based on business impact (financial → operational → experience)  
+- **Complexity measurement (`category_count`)** — quantifies how many issues are present, identifying high-friction, multi-system failures  
 
-- **Priority-based primary category**  
-  Assigns a single dominant category based on business impact (financial → operational → experience)  
+This structure supports analysis at both:
+- **Volume level** — what issues are most common  
+- **Complexity level** — which complaints are most operationally challenging  
 
-- **Complexity measurement (`category_count`)**  
-  Quantifies how many issues are present in a complaint, enabling identification of high-friction, multi-system failures  
-
-This structure allows analysis at both:
-- **Volume level** (what issues are most common)  
-- **Complexity level** (which complaints are most operationally challenging)
+---
 
 ### 3. SQL Analysis Layer
 
@@ -98,9 +95,8 @@ Structured queries simulate a warehouse-style analytics workflow:
 - Category distribution  
 - State-level complaint patterns  
 - Multi-category (high-complexity) complaints  
-
+---
 SQL is organized by analytical theme for clarity and reuse.
-
 ---
 
 ## 📊 Visual Insights
@@ -166,32 +162,28 @@ xfinity-customer-friction-analysis/
 ---
 
 ## How to Run
-
 1. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
-Open notebooks in order:
-```bash
-01_data_cleaning.ipynb
-02_classification.ipynb
-03_eda_and_insights.ipynb
-```
+Run notebooks in order:
+- 01_data_cleaning.ipynb
+- 02_classification.ipynb
+- 03_eda_and_insights.ipynb
 Run SQL queries in your preferred environment (SQLite, Snowflake, etc.)
----
 ## Limitations
 - Keyword-based classification (no NLP or ML model)
 - No negation handling (e.g., “not slow” may misclassify)
 - State-level analysis not normalized by population or subscriber base
 - Dataset limited to ~2,200 complaints from a specific time period
-Why This Project Matters
+## Why This Project Matters
 
-This project demonstrates the ability to:
+### This project demonstrates the ability to:
 
-- Translate unstructured text data into structured insights
-- Align analysis with real business functions
-- Combine Python and SQL in a realistic workflow
-- Move from raw data → classification → insight generation
+Translate unstructured text data into structured insights
+Align analysis with real business functions
+Combine Python and SQL in a realistic workflow
+Move from raw data → classification → insight generation
 
 It reflects how customer experience data can be operationalized to support decision-making at scale.
