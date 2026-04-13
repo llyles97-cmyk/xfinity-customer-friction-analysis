@@ -157,8 +157,11 @@ xfinity-customer-friction-analysis/
 └── requirements.txt
 ```
 ---
+
 ## How to Run
-Install dependencies:
+
+1. Install dependencies:
+
 ```bash
 pip install -r requirements.txt
 ```
@@ -169,18 +172,19 @@ Open notebooks in order:
 03_eda_and_insights.ipynb
 ```
 Run SQL queries in your preferred environment (SQLite, Snowflake, etc.)
+---
 ## Limitations
-Keyword-based classification (no NLP or ML model)
-No negation handling (e.g., “not slow” may misclassify)
-State-level analysis not normalized by population or subscriber base
-Dataset limited to ~2,200 complaints from a specific time period
-## Why This Project Matters
+- Keyword-based classification (no NLP or ML model)
+- No negation handling (e.g., “not slow” may misclassify)
+- State-level analysis not normalized by population or subscriber base
+- Dataset limited to ~2,200 complaints from a specific time period
+Why This Project Matters
 
 This project demonstrates the ability to:
 
-Translate unstructured text data into structured insights
-Align analysis with real business functions
-Combine Python and SQL in a realistic workflow
-Move from raw data → classification → insight generation
+- Translate unstructured text data into structured insights
+- Align analysis with real business functions
+- Combine Python and SQL in a realistic workflow
+- Move from raw data → classification → insight generation
 
 It reflects how customer experience data can be operationalized to support decision-making at scale.
