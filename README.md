@@ -128,7 +128,7 @@ xfinity-customer-friction-analysis/
 ├── README.md
 ├── ROADMAP.md
 └── requirements.txt
-```bash
+```
 
 ## How to Run
 
