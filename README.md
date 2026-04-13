@@ -104,7 +104,6 @@ SQL is organized by analytical theme for clarity and reuse.
 ![Complaint Distribution](visuals/category_distribution.png)
 
 ---
-
 ## Project Structure
 xfinity-customer-friction-analysis/
 ├── data/
@@ -127,6 +126,7 @@ xfinity-customer-friction-analysis/
 ├── README.md
 ├── ROADMAP.md
 └── requirements.txt
+
 ---
 
 ## How to Run
