@@ -4,19 +4,19 @@
 
 Customer complaints are one of the clearest signals of where a business is failing at scale.
 
-For telecom companies like Xfinity, complaints reflect breakdowns across billing systems, network reliability, installation processes, and customer support operations. Identifying patterns within this data can help prioritize operational improvements and reduce customer churn.
+For telecom companies like Xfinity, complaints reflect breakdowns across billing systems, network reliability, installation processes, and customer support operations. Identifying patterns within this data helps prioritize operational improvements and reduce customer churn.
 
-This project analyzes complaint data to surface the primary drivers of customer friction and translate them into actionable insights.
+This project translates raw complaint data into structured, business-aligned insights to identify the primary drivers of customer friction.
 
 ---
 
 ## Objective
 
-Transform raw complaint data into a structured, business-aligned framework that answers:
+Transform unstructured complaint data into a framework that answers:
 
 - Where are customers experiencing the most friction?
 - What types of issues drive the highest complaint volume?
-- How complex are customer complaints (single vs. multi-issue)?
+- How complex are complaints (single vs. multi-issue)?
 - How do issues vary across regions?
 
 ---
@@ -33,8 +33,12 @@ Transform raw complaint data into a structured, business-aligned framework that 
   - Channel
   - Date
 
-Raw datasets are not included in this repository.  
-You can access the original dataset here:  
+Due to file size constraints, this repository includes a **sample of the processed dataset**.  
+Analysis and insights are based on the full dataset.
+
+Raw data is not included in this repository. In production environments, raw data would typically be stored in external systems (e.g., data warehouses or object storage).
+
+Access the original dataset here:  
 https://www.kaggle.com/code/anik424/eda-comcast-consumer-complaints-analysis-using-r
 
 ---
@@ -64,7 +68,7 @@ Each complaint can map to multiple categories.
 
 A **primary category** is assigned using a priority framework based on:
 - financial impact  
-- operational responsibility  
+- operational ownership  
 - customer experience layer  
 
 A `category_count` field captures complaint complexity.
@@ -73,23 +77,31 @@ A `category_count` field captures complaint complexity.
 
 ### 3. SQL Analysis Layer
 
-Structured queries simulate warehouse-style analysis:
+Structured queries simulate a warehouse-style analytics workflow:
 
 - Volume trends over time  
 - Category distribution  
 - State-level complaint patterns  
-- Multi-category (high complexity) complaints  
+- Multi-category (high-complexity) complaints  
 
-SQL is organized by analytical theme for readability.
+SQL is organized by analytical theme for clarity and reuse.
 
 ---
 
 ## Key Findings
 
-- **Billing issues dominate complaint volume**, indicating financial friction is the primary driver of escalation  
+- **Billing issues dominate complaint volume**, indicating financial friction is the primary escalation driver  
 - **Customer service and billing frequently overlap**, suggesting resolution failures—not just root issues—drive complaints  
 - **Multi-category complaints represent high-complexity cases**, often involving both operational and support breakdowns  
 - **Complaint volume varies significantly by state**, though not normalized by subscriber base  
+
+---
+
+## Visual Insights
+
+### Complaint Distribution by Category
+
+![Complaint Distribution](visuals/category_distribution.png)
 
 ---
 
@@ -98,6 +110,7 @@ xfinity-customer-friction-analysis/
 ├── data/
 │ ├── raw/
 │ └── processed/
+│ └── sample_comcast_complaints.csv
 ├── notebooks/
 │ ├── 01_data_cleaning.ipynb
 │ ├── 02_classification.ipynb
@@ -110,7 +123,9 @@ xfinity-customer-friction-analysis/
 ├── src/
 │ └── classify.py
 ├── visuals/
+│ └── category_distribution.png
 ├── README.md
+├── ROADMAP.md
 └── requirements.txt
 
 ---
@@ -121,9 +136,9 @@ xfinity-customer-friction-analysis/
 pip install -r requirements.txt
 
 2. Open notebooks in order:
-- 01_data_cleaning.ipynb  
-- 02_classification.ipynb  
-- 03_eda_and_insights.ipynb  
+- `01_data_cleaning.ipynb`  
+- `02_classification.ipynb`  
+- `03_eda_and_insights.ipynb`  
 
 3. Run SQL queries in your preferred environment (SQLite, Snowflake, etc.)
 
