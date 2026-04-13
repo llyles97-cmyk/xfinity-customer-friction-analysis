@@ -108,17 +108,28 @@ SQL is organized by analytical theme for clarity and reuse.
 
 These patterns highlight the importance of treating customer experience as a connected system rather than siloed touchpoints.
 ---
+## Key Insights
+
+- **Customer friction is systemic, not isolated**
+  - Over 55% of complaints involve multiple issue categories  
+  - Issues often span billing, support, and network simultaneously  
+
+- **Billing is the primary driver of escalation**
+  - Financial friction (charges, fees, billing cycles) dominates complaint volume  
+
+- **Customer service is downstream, not root cause**
+  - Support interactions often reflect unresolved upstream system failures
+---
 ## 📊 Visual Insights
 
-### Complaint Distribution by Category
+### Category Distribution
 ![Category Distribution](visuals/category_distribution.png)
 
-### Monthly Complaint Volume
-![Monthly Volume](visuals/monthly_complaint_volume.png)
+### Complaint Complexity
+![Complaint Complexity](visuals/complexity_distribution.png)
 
-### Complaint Complexity Distribution
-![Complexity](visuals/complexity_distribution.png)
-
+### Monthly Trends
+![Monthly Trends](visuals/monthly_complaint_volume.png)
 ---
 
 > 💡 **Insight:**  
@@ -196,3 +207,8 @@ Combine Python and SQL in a realistic workflow
 Move from raw data → classification → insight generation
 
 It reflects how customer experience data can be operationalized to support decision-making at scale.
+## Full Presentation
+
+View the full strategy deck here:
+
+👉 [Xfinity Customer Friction Analysis Deck](visuals/xfinity-friction-deck.pdf)
