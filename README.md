@@ -105,29 +105,29 @@ SQL is organized by analytical theme for clarity and reuse.
 
 ---
 ## Project Structure
+
+```bash
 xfinity-customer-friction-analysis/
 ├── data/
-│ ├── raw/
-│ └── processed/
-│ └── sample_comcast_complaints.csv
+│   ├── raw/
+│   └── processed/
+│       └── sample_comcast_complaints.csv
 ├── notebooks/
-│ ├── 01_data_cleaning.ipynb
-│ ├── 02_classification.ipynb
-│ └── 03_eda_and_insights.ipynb
+│   ├── 01_data_cleaning.ipynb
+│   ├── 02_classification.ipynb
+│   └── 03_eda_and_insights.ipynb
 ├── sql/
-│ ├── volume_trends.sql
-│ ├── category_breakdown.sql
-│ ├── state_analysis.sql
-│ └── complexity_analysis.sql
+│   ├── volume_trends.sql
+│   ├── category_breakdown.sql
+│   ├── state_analysis.sql
+│   └── complexity_analysis.sql
 ├── src/
-│ └── classify.py
+│   └── classify.py
 ├── visuals/
-│ └── category_distribution.png
+│   └── category_distribution.png
 ├── README.md
 ├── ROADMAP.md
 └── requirements.txt
-
----
 
 ## How to Run
 
