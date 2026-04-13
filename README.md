@@ -1,6 +1,11 @@
 # Xfinity Customer Friction Analysis
 
-![Banner](visuals/banner.png)
+![Python](https://img.shields.io/badge/Python-Analysis-blue)
+![SQL](https://img.shields.io/badge/SQL-Analytics-green)
+![Status](https://img.shields.io/badge/Project-Complete-brightgreen)
+
+---
+
 ## Business Context
 
 Customer complaints are one of the clearest signals of where a business is failing at scale.
@@ -24,15 +29,15 @@ Transform unstructured complaint data into a framework that answers:
 
 ## Dataset
 
-- Source: FCC + Consumer Affairs complaint data (via Kaggle)
-- Approx. size: ~2,200 complaints
-- Timeframe: 2015 (FCC dataset)
+- Source: FCC + Consumer Affairs complaint data (via Kaggle)  
+- Approx. size: ~2,200 complaints  
+- Timeframe: 2015 (FCC dataset)  
 - Data includes:
-  - Complaint text
-  - State
-  - Status
-  - Channel
-  - Date
+  - Complaint text  
+  - State  
+  - Status  
+  - Channel  
+  - Date  
 
 Due to file size constraints, this repository includes a **sample of the processed dataset**.  
 Analysis and insights are based on the full dataset.
@@ -44,7 +49,7 @@ https://www.kaggle.com/code/anik424/eda-comcast-consumer-complaints-analysis-usi
 
 ---
 
-## Methodology
+## 🧠 Methodology
 
 ### 1. Data Cleaning
 - Standardized text fields  
@@ -89,7 +94,25 @@ SQL is organized by analytical theme for clarity and reuse.
 
 ---
 
-## Key Findings
+## 📊 Visual Insights
+
+### Complaint Distribution by Category
+![Category Distribution](visuals/category_distribution.png)
+
+### Monthly Complaint Volume
+![Monthly Volume](visuals/monthly_complaint_volume.png)
+
+### Complaint Complexity Distribution
+![Complexity](visuals/complexity_distribution.png)
+
+---
+
+> 💡 **Insight:**  
+> A significant portion of complaints fall into multiple categories, indicating that customer issues are often interconnected rather than isolated — a strong signal of systemic CX friction.
+
+---
+
+## 🎯 Key Findings
 
 - **Billing issues dominate complaint volume**, indicating financial friction is the primary escalation driver  
 - **Customer service and billing frequently overlap**, suggesting resolution failures—not just root issues—drive complaints  
@@ -98,14 +121,7 @@ SQL is organized by analytical theme for clarity and reuse.
 
 ---
 
-## Visual Insights
-
-### Complaint Distribution by Category
-
-![Complaint Distribution](visuals/category_distribution.png)
-
----
-## Project Structure
+## 🧱 Project Structure
 
 ```bash
 xfinity-customer-friction-analysis/
@@ -125,42 +141,33 @@ xfinity-customer-friction-analysis/
 ├── src/
 │   └── classify.py
 ├── visuals/
-│   └── category_distribution.png
+│   ├── category_distribution.png
+│   ├── monthly_complaint_volume.png
+│   └── complexity_distribution.png
 ├── README.md
 ├── ROADMAP.md
 └── requirements.txt
 ```
-
-## How to Run
-
-1. Install dependencies:
+How to Run
+Install dependencies:
 pip install -r requirements.txt
-
-2. Open notebooks in order:
-- `01_data_cleaning.ipynb`  
-- `02_classification.ipynb`  
-- `03_eda_and_insights.ipynb`  
-
-3. Run SQL queries in your preferred environment (SQLite, Snowflake, etc.)
-
----
-
-## Limitations
-
-- Keyword-based classification (no NLP or ML model)  
-- No negation handling (e.g., “not slow” may misclassify)  
-- State-level analysis not normalized by population or subscriber base  
-- Dataset limited to ~2,200 complaints from a specific time period  
-
----
-
-## Why This Project Matters
+Open notebooks in order:
+01_data_cleaning.ipynb
+02_classification.ipynb
+03_eda_and_insights.ipynb
+Run SQL queries in your preferred environment (SQLite, Snowflake, etc.)
+Limitations
+Keyword-based classification (no NLP or ML model)
+No negation handling (e.g., “not slow” may misclassify)
+State-level analysis not normalized by population or subscriber base
+Dataset limited to ~2,200 complaints from a specific time period
+Why This Project Matters
 
 This project demonstrates the ability to:
 
-- Translate unstructured text data into structured insights  
-- Align analysis with real business functions  
-- Combine Python and SQL in a realistic workflow  
-- Move from raw data → classification → insight generation  
+Translate unstructured text data into structured insights
+Align analysis with real business functions
+Combine Python and SQL in a realistic workflow
+Move from raw data → classification → insight generation
 
 It reflects how customer experience data can be operationalized to support decision-making at scale.
