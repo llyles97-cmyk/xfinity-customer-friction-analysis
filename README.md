@@ -58,7 +58,11 @@ https://www.kaggle.com/code/anik424/eda-comcast-consumer-complaints-analysis-usi
 
 ### 2. Complaint Classification
 
-Implemented a **multi-label keyword classification system** aligned to telecom CX functions:
+To translate unstructured complaint text into actionable insights, a **multi-label keyword classification system** was developed based on telecom customer experience (CX) functions.
+
+Rather than forcing each complaint into a single category, this approach reflects how real-world issues occur — customers often experience multiple failures within the same interaction (e.g., billing + customer service).
+
+Each complaint is evaluated against a structured taxonomy:
 
 - billing_issue  
 - contract_dispute  
@@ -70,16 +74,20 @@ Implemented a **multi-label keyword classification system** aligned to telecom C
 - customer_service  
 - data_privacy  
 
-Each complaint can map to multiple categories.
+#### Classification Design Principles
 
-A **primary category** is assigned using a priority framework based on:
-- financial impact  
-- operational ownership  
-- customer experience layer  
+- **Multi-label classification**  
+  Captures overlapping issues to better reflect real customer experiences  
 
-A `category_count` field captures complaint complexity.
+- **Priority-based primary category**  
+  Assigns a single dominant category based on business impact (financial → operational → experience)  
 
----
+- **Complexity measurement (`category_count`)**  
+  Quantifies how many issues are present in a complaint, enabling identification of high-friction, multi-system failures  
+
+This structure allows analysis at both:
+- **Volume level** (what issues are most common)  
+- **Complexity level** (which complaints are most operationally challenging)
 
 ### 3. SQL Analysis Layer
 
