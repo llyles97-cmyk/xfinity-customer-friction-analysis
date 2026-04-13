@@ -1,4 +1,5 @@
 # Xfinity Customer Friction Analysis
+This project analyzes customer complaint data to identify systemic friction points across service, billing, and support operations.
 
 ![Banner](visuals/banner.png)
 ![Python](https://img.shields.io/badge/Python-Analysis-blue)
@@ -98,7 +99,15 @@ Structured queries simulate a warehouse-style analytics workflow:
 ---
 SQL is organized by analytical theme for clarity and reuse.
 ---
+## Strategic Insights
 
+- Customer complaints are rarely isolated — they cluster across multiple service areas
+- Billing issues frequently trigger secondary support interactions, increasing friction
+- High-complexity complaints indicate breakdowns across internal teams, not single failures
+- Channel data suggests digital support does not fully resolve issues, leading to repeat contact
+
+These patterns highlight the importance of treating customer experience as a connected system rather than siloed touchpoints.
+---
 ## 📊 Visual Insights
 
 ### Complaint Distribution by Category
