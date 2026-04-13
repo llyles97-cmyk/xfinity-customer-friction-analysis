@@ -148,20 +148,25 @@ xfinity-customer-friction-analysis/
 ├── ROADMAP.md
 └── requirements.txt
 ```
-How to Run
+---
+## How to Run
 Install dependencies:
+```bash
 pip install -r requirements.txt
+```
 Open notebooks in order:
+```bash
 01_data_cleaning.ipynb
 02_classification.ipynb
 03_eda_and_insights.ipynb
+```
 Run SQL queries in your preferred environment (SQLite, Snowflake, etc.)
-Limitations
+## Limitations
 Keyword-based classification (no NLP or ML model)
 No negation handling (e.g., “not slow” may misclassify)
 State-level analysis not normalized by population or subscriber base
 Dataset limited to ~2,200 complaints from a specific time period
-Why This Project Matters
+## Why This Project Matters
 
 This project demonstrates the ability to:
 
