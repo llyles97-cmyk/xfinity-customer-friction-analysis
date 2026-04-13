@@ -1,5 +1,6 @@
 # Xfinity Customer Friction Analysis
 
+![Banner](visuals/banner.png)
 ![Python](https://img.shields.io/badge/Python-Analysis-blue)
 ![SQL](https://img.shields.io/badge/SQL-Analytics-green)
 ![Status](https://img.shields.io/badge/Project-Complete-brightgreen)
