@@ -116,8 +116,14 @@ SQL is organized by analytical theme for clarity and reuse.
 ---
 
 > 💡 **Insight:**  
-> A significant portion of complaints fall into multiple categories, indicating that customer issues are often interconnected rather than isolated — a strong signal of systemic CX friction.
+> Multi-category complaints indicate systemic failures, where issues span multiple operational layers (e.g., billing + support). These cases represent the highest-friction customer experiences.
 
+---
+## 📌 Business Implications
+
+- Financial friction (billing) is the primary driver of escalation, indicating a need for clearer pricing, billing transparency, and dispute resolution flows  
+- Overlap between customer service and other categories suggests support teams are handling downstream failures rather than resolving root causes  
+- Multi-category complaints highlight systemic breakdowns across functions, requiring cross-functional CX solutions rather than isolated fixes
 ---
 
 ## 🎯 Key Findings
