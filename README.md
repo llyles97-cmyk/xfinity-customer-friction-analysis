@@ -1,5 +1,6 @@
 # Xfinity Customer Friction Analysis
 
+![Banner](visuals/banner.png)
 ## Business Context
 
 Customer complaints are one of the clearest signals of where a business is failing at scale.
